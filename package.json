@@ -1,13 +1,72 @@
 {
-  "name": "monei-token",
-  "version": "1.0.0",
+  "name": "monei-eurm-contract",
+  "version": "0.1.0",
+  "description": "ERC20 for Polygon Blockchain",
   "main": "index.js",
-  "license": "MIT",
-  "dependencies": {
-    "bip39": "^3.0.3",
+  "scripts": {
+    "test": "npx hardhat test",
+    "build": "npx hardhat clean && npx hardhat compile",
+    "generate-types": "npx hardhat typechain",
+    "typecheck": "tsc --noEmit",
+    "deploy:test:bsc": "npx hardhat run scripts/deploy.ts --network bsc_testnet --verbose",
+    "deploy:test:mumbai": "npx hardhat run scripts/deploy.ts --network mumbai --verbose",
+    "deploy": "npx hardhat run scripts/deploy.ts --verbose"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MONEI/monei-eurm-contract.git"
+  },
+  "keywords": [
+    "ERC20",
+    "Polygon",
+    "L2"
+  ],
+  "author": "Alfredo Lopez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MONEI/monei-eurm-contract/issues"
+  },
+  "homepage": "https://github.com/MONEI/monei-eurm-contract#readme",
+  "devDependencies": {
+    "@nomiclabs/hardhat-ethers": "^2.0.2",
+    "@nomiclabs/hardhat-etherscan": "^2.1.5",
+    "@nomiclabs/hardhat-truffle5": "^2.0.0",
+    "@nomiclabs/hardhat-waffle": "^2.0.1",
+    "@nomiclabs/hardhat-web3": "^2.0.0",
+    "@openzeppelin/contracts-upgradeable": "^4.4.0",
+    "@openzeppelin/hardhat-upgrades": "^1.12.0",
+    "@openzeppelin/test-helpers": "^0.5.15",
+    "@symfoni/hardhat-react": "^0.3.0",
+    "@typechain/ethers-v5": "^6.0.5",
+    "@types/chai": "^4.2.17",
+    "@types/dotenv": "^8.2.0",
+    "@types/mocha": "^7.0.2",
+    "@types/node": "^10.17.60",
+    "bignumber.js": "^9.0.1",
+    "chai": "^4.3.4",
+    "chai-spies": "^1.0.0",
     "dotenv": "^8.2.0",
-    "@truffle/hdwallet-provider": "^1.2.1",
-    "openzeppelin-solidity": "^2.2.0",
-    "truffle": "^5.1.65"
+    "ethereum-waffle": "^3.3.0",
+    "ethereumjs-util": "^7.0.10",
+    "ethers": "^5.5.2",
+    "hardhat": "^2.6.8",
+    "hardhat-contract-sizer": "^2.0.3",
+    "hardhat-gas-reporter": "^1.0.4",
+    "hardhat-spdx-license-identifier": "^2.0.3",
+    "hardhat-typechain": "^0.3.5",
+    "lodash": "^4.17.21",
+    "mocha": "^8.4.0",
+    "moment": "^2.29.1",
+    "react": "^16.14.0",
+    "solcvm": "0.0.2",
+    "solidity-coverage": "^0.7.16",
+    "ts-generator": "^0.1.1",
+    "ts-mocha": "^8.0.0",
+    "ts-morph": "^9.0.0",
+    "ts-node": "^8.10.2",
+    "tsconfig-paths": "^3.9.0",
+    "typechain": "^4.0.3",
+    "typescript": "^4.2.4",
+    "web3": "^1.6.1"
   }
 }
